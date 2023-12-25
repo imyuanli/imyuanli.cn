@@ -7,7 +7,7 @@ const Intro = () => {
     return (
         <div className="w-full py-24 flex justify-evenly items-center flex-col">
             <div
-                data-aos="fade-up" data-aos-duration="300"
+                data-aos="fade-up"
                 className={'flex items-center justify-between container flex-col space-y-8'}
             >
                 <div className={'h-full'}>
