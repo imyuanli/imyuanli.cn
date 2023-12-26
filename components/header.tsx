@@ -3,7 +3,7 @@
 import Link from "next/link";
 import {Button} from "@/components/ui/button";
 import {usePathname} from "next/navigation";
-import {Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger} from "@/components/ui/sheet";
+import {Sheet, SheetContent, SheetTrigger} from "@/components/ui/sheet";
 import {Menu} from "lucide-react";
 
 const routes = [
@@ -37,11 +37,11 @@ const Header = () => {
     const pathname = usePathname()
 
     return (
-        <div className={'py-8 px-4 flex justify-end items-center md:justify-center'}>
-            <div className={'hidden md:block space-x-4 border rounded-full shadow-md px-8 py-1'}>
+        <div className={'fixed top-4 z-10 w-full flex justify-end md:justify-center items-center px-4'}>
+            <div className={'hidden md:block space-x-4 border rounded-full shadow-md px-8 py-2 bg-white/90 backdrop-blur-sm'}>
                 {routes.map((route, index) => (
                     <Link href={route.path} key={index}>
-                        <Button variant={route.path === pathname?'secondary':'ghost'}>{route.name}</Button>
+                        <Button variant={route.path === pathname ? 'secondary' : 'ghost'}>{route.name}</Button>
                     </Link>
                 ))}
             </div>
@@ -52,17 +52,17 @@ const Header = () => {
                             <Menu/>
                         </Button>
                     </SheetTrigger>
-                    <SheetContent>
-                        <SheetHeader>
-                            <SheetTitle>Are you sure absolutely sure?</SheetTitle>
-                            <SheetDescription>
-                                This action cannot be undone. This will permanently delete your account
-                                and remove your data from our servers.
-                            </SheetDescription>
-                        </SheetHeader>
+                    <SheetContent side={'top'}>
+                        <div className={'mt-4 flex flex-col justify-center items-center space-y-1'}>
+                            {routes.map((route, index) => (
+                                <Link className={'w-full'} href={route.path} key={index}>
+                                    <Button className={'w-full'}
+                                            variant={route.path === pathname ? 'secondary' : 'ghost'}>{route.name}</Button>
+                                </Link>
+                            ))}
+                        </div>
                     </SheetContent>
                 </Sheet>
-
             </div>
         </div>
     );
