@@ -5,7 +5,7 @@ import {Button} from "@/components/ui/button";
 
 const Intro = () => {
     return (
-        <div className="w-full py-24 flex justify-evenly items-center flex-col">
+        <div className="min-h-screen w-full py-24 flex justify-evenly items-center flex-col">
             <div
                 data-aos="fade-up"
                 className={'flex items-center justify-between container flex-col space-y-8'}
