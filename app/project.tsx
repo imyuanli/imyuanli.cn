@@ -6,9 +6,9 @@ import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {Github} from "lucide-react";
 import Link from "next/link";
+import {getLinearGradient} from "@/lib/utils";
 
 const Project = () => {
-
     const projects = [
         {
             id: 1,
@@ -57,7 +57,11 @@ const Project = () => {
     ]
 
     return (
-        <div className="min-h-screen w-full project-bg my-8">
+        <div className="min-h-screen w-full my-8"
+             style={{
+                 backgroundImage: `url(/project-bg.png),${getLinearGradient()}`,
+             }}
+        >
             <div className={'bg-white w-full h-20 md:h-40'} style={{clipPath: "polygon(0 0, 100% 0, 20% 80%)"}}/>
             <div className={'container py-8 md:py-12 space-y-8'}>
                 <div data-aos="fade-up" className={'flex justify-center md:justify-between items-center'}>
@@ -68,7 +72,7 @@ const Project = () => {
                         查看全部
                     </Button>
                 </div>
-                <div className={'grid grid-cols-1 md:grid-cols-2 gap-8'} >
+                <div className={'grid grid-cols-1 md:grid-cols-2 gap-8'}>
                     {projects.map((p, index) => (
                         <Link href={p.url} data-aos="zoom-in-up">
                             <Card
@@ -135,9 +139,9 @@ const Project = () => {
                         </Link>
                     ))}
                 </div>
-                <Button className={'hidden md:block w-full'}>
-                    查看全部
-                </Button>
+                {/*<Button className={'hidden md:block w-full'}>*/}
+                {/*    查看全部*/}
+                {/*</Button>*/}
             </div>
             <div className={'bg-white w-full h-20 md:h-40'}
                  style={{clipPath: "polygon(0 0, 80% 80%, 100% 0,100% 100%,0 100%)"}}/>
