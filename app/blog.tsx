@@ -132,7 +132,7 @@ const Blog = () => {
                 <h1 className={'text-3xl font-bold'}>近期博客</h1>
                 <div className={'columns-1 md:columns-2 xl:columns-4 gap4'}>
                     {blog.map((b) => (
-                        <Card className={'mb-4 break-inside-avoid-column'}>
+                        <Card data-aos={'zoom-in-down'} className={'mb-4 break-inside-avoid-column'}>
                             <CardHeader>
                                 <CardTitle>{b.title}</CardTitle>
                                 <CardDescription>Card Description</CardDescription>
