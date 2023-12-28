@@ -30,12 +30,9 @@ const ContactMe = () => {
     })
 
     function onSubmit(data: z.infer<typeof FormSchema>) {
-        toast("You submitted the following values:", {
-            description: (
-                <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-            ),
+        toast({
+            title: "You submitted the following values:",
+            description:"xxxxx",
         })
     }
 
@@ -48,13 +45,14 @@ const ContactMe = () => {
                 </div>
             </div>
             <div className={'w-full h-full flex justify-center items-center'}>
-                <div className={"p-24 h-96 rounded-md shadow-md relative flex flex-col justify-center items-center space-y-4 bg-contain bg-top bg-no-repeat"}
-                style={{
-                    backgroundImage: `url('/bg.png')`
-                }}
+                <div
+                    className={"p-24 h-96 rounded-md shadow-md relative flex flex-col justify-center items-center space-y-4 bg-contain bg-top bg-no-repeat"}
+                    style={{
+                        backgroundImage: `url('/bg.png')`
+                    }}
                 >
                     <div className={'text-2xl font-semibold'}>
-                       还有其他方式 ！！！
+                        还有其他方式 ！！！
                     </div>
                     <div className={'flex space-x-4'}>
                         <Button className={'w-full'}>
