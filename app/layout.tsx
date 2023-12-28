@@ -4,6 +4,7 @@ import './globals.css'
 import AosProvider from "@/provider/aos-provider";
 import Header from "@/components/header";
 import {cn} from "@/lib/utils";
+import {Toaster} from "@/components/ui/toaster";
 
 const inter = Inter({subsets: ['latin']})
 
@@ -23,6 +24,7 @@ export default function RootLayout({
         <AosProvider>
             <Header/>
             {children}
+            <Toaster/>
         </AosProvider>
         </body>
         </html>
