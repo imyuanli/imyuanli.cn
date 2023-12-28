@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-        <body className={cn(inter.className, "relative bg-[url('/bg.png')] bg-contain bg-top bg-no-repeat")}>
+        <body className={cn(inter.className, "relative")}>
         <AosProvider>
             <Header/>
             {children}
