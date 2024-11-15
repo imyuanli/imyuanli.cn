@@ -53,7 +53,7 @@ const ProjectList = ({ projects }: any) => {
         return (
           <Card
             className={
-              'group :hover:scale-105 hover:shadow-md duration-200 cursor-pointer relative'
+              'group bg-transparent bg-gradient-to-br from-white/95 from-30% to-white/70 to-75% flex flex-col justify-between'
             }
             key={index}
           >
@@ -98,22 +98,23 @@ const ProjectList = ({ projects }: any) => {
                 height={24}
               />
               {item?.slug && (
-                <div className={'flex space-x-2'}>
-                  <Github size={20} />
+                <div className={'flex justify-center items-center'}>
+                  <Link
+                    href={`https://github.com/imyuanli/${item.slug}`}
+                    target={'_blank'}
+                  >
+                    <Button className={'flex'} size={'icon'} variant={'ghost'}>
+                      <Github />
+                    </Button>
+                  </Link>
+                  <Link href={item?.link} target={'_blank'}>
+                    <Button className={'flex'} size={'icon'} variant={'ghost'}>
+                      <ExternalLink />
+                    </Button>
+                  </Link>
                 </div>
               )}
             </CardFooter>
-            <div
-              className={
-                'hidden group-hover:block transition duration-200 absolute -right-2 -top-2'
-              }
-            >
-              <Link href={item?.link} target={'_blank'}>
-                <Button className={'w-8 h-8'} size={'icon'}>
-                  <ExternalLink size={20} />
-                </Button>
-              </Link>
-            </div>
           </Card>
         )
       })}
