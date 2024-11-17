@@ -10,6 +10,7 @@ const Project = () => {
 
   return (
     <section
+      id={'project'}
       className="min-h-screen w-full border-none"
       style={{
         backgroundImage: `url(/project-bg.png),${color}`,
@@ -20,27 +21,29 @@ const Project = () => {
         style={{ clipPath: 'polygon(0 -1px, 100% -1px, 20% 80%)' }}
       />
       <Tabs defaultValue="personal" className="container">
-        <div className={'flex justify-between items-end py-4 md:py-8'}>
-          <div className={'flex justify-center md:justify-between items-end'}>
-            <div
-              data-aos="fade-right"
-              className={'font-semibold text-white text-center md:text-left'}
-            >
-              <p className={'text-2xl md:text-3xl mb-4'}>看看我做过</p>
-              <p className={'text-4xl md:text-5xl'}>什么项目</p>
-            </div>
-            {/*<div data-aos="fade-left" className={'hidden md:block'}>*/}
-            {/*    <Link href={''}>*/}
-            {/*        <Button variant={'outline'} className={'w-full px-12 py-6'}>*/}
-            {/*            <span className={'mr-2 text-lg'}>查看全部</span> <ArrowRight/>*/}
-            {/*        </Button>*/}
-            {/*    </Link>*/}
-            {/*</div>*/}
+        <div
+          className={
+            'flex flex-col justify-center items-center md:flex-row md:justify-between md:items-end py-4 md:py-8'
+          }
+        >
+          <div
+            data-aos="fade-right"
+            className={
+              'text-2xl font-semibold text-white text-center mb-4 md:text-left md:text-3xl md:mb-0'
+            }
+          >
+            看看我做过 de <span className={'text-4xl md:text-5xl'}>项目</span>
           </div>
-          <TabsList>
-            <TabsTrigger value="personal">个人开源项目</TabsTrigger>
-            <TabsTrigger value="company">公司项目</TabsTrigger>
-          </TabsList>
+          <div data-aos="fade-left" className={'w-full md:w-fit'}>
+            <TabsList className={'w-full'}>
+              <TabsTrigger className={'w-full'} value="personal">
+                个人开源项目
+              </TabsTrigger>
+              <TabsTrigger className={'w-full'} value="company">
+                公司项目
+              </TabsTrigger>
+            </TabsList>
+          </div>
         </div>
         <TabsContent value="personal">
           <ProjectList projects={personal_project} />

@@ -52,6 +52,7 @@ const ProjectList = ({ projects }: any) => {
         const { variant, text }: any = getStatus(item.status)
         return (
           <Card
+            data-aos="fade-up"
             className={
               'group bg-transparent bg-gradient-to-br from-white/95 from-30% to-white/70 to-75% flex flex-col justify-between'
             }
