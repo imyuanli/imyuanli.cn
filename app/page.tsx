@@ -1,5 +1,6 @@
 import Hero from '@/components/hero'
 import Project from '@/components/project'
+import Footer from '@/components/footer'
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
       <div className={'w-full flex flex-col space-y-16'}>
         <Hero />
         <Project />
+        <Footer />
       </div>
     </div>
   )
