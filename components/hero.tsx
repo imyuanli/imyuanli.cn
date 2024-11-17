@@ -55,7 +55,7 @@ const Hero = () => {
             （鸢离）
           </p>
           <p className={'text-center md:text-left'}>
-            一名全栈开发工程师，但是我更专注于前端开发。
+            一名 <s>全栈</s> 开发工程师，但是我更专注于前端开发。
           </p>
           <Socialize />
         </div>
