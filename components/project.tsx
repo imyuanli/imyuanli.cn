@@ -22,19 +22,19 @@ const Project = () => {
       />
       <Tabs defaultValue="personal" className="container">
         <div
+          data-aos="fade-up"
           className={
             'flex flex-col justify-center items-center md:flex-row md:justify-between md:items-end py-4 md:py-8'
           }
         >
           <div
-            data-aos="fade-right"
             className={
               'text-2xl font-semibold text-white text-center mb-4 md:text-left md:text-3xl md:mb-0'
             }
           >
             看看我做过 de <span className={'text-4xl md:text-5xl'}>项目</span>
           </div>
-          <div data-aos="fade-left" className={'w-full md:w-fit'}>
+          <div className={'w-full md:w-fit'}>
             <TabsList className={'w-full'}>
               <TabsTrigger className={'w-full'} value="personal">
                 个人开源项目
