@@ -50,10 +50,18 @@ const Hero = () => {
           data-aos="fade-down-right"
           className={'flex flex-col items-center md:items-start space-y-4'}
         >
-          <p>
-            我是<span className={'text-5xl font-bold'}>Yuan Li</span>
-            （鸢离）
-          </p>
+          <div className={'flex justify-start items-end space-x-2'}>
+            <p>
+              我是<span className={'text-5xl font-bold'}>Yuan Li</span>
+              （鸢离）
+            </p>
+            <Image
+              src={'/logo/yl.png'}
+              width={48}
+              height={48}
+              alt={'imyuanli'}
+            />
+          </div>
           <p className={'text-center md:text-left'}>
             一名 <s>全栈</s> 开发工程师，但是我更专注于前端开发。
           </p>
